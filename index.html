@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <html>
-<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-language/v0.10.1/mapbox-gl-language.js'></script>
+
 <head>
   <meta charset='utf-8' />
   <title></title>
@@ -79,6 +79,7 @@
 <body>
 
   <div id='map'></div>
+  <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-language/v0.10.1/mapbox-gl-language.js'></script>
   <script>
 
     var transformRequest = (url, resourceType) => {
@@ -135,7 +136,7 @@
               },
               'paint': {
                 'circle-radius': 5,
-                'circle-color': data.features[0].properties.Color
+                'circle-color': "red"
               }
             });
 
