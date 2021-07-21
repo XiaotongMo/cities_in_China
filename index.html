@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-language/v0.10.1/mapbox-gl-language.js'></script>
 <html>
 
 <head>
@@ -100,6 +101,11 @@
       zoom: 10,// starting zoom
       transformRequest: transformRequest
     });
+    mapboxgl.setRTLTextPlugin('https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-rtl-text/v0.1.0/mapbox-gl-rtl-text.js');
+    var languageControl = new MapboxLanguage({
+        defaultLanguage: 'zh'//设置语言为中文
+    });
+    map.addControl(languageControl);
 
     $(document).ready(function () {
       $.ajax({
